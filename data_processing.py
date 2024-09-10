@@ -66,10 +66,10 @@ def process_data(df, e_offer_values, c_data_type_values, columns_to_sum, country
 
 # Main function to execute the data processing and save results to BigQuery
 def main(request):
-    project_id = 'eur-itnanalytics-97661-sbx'
-    dataset_id = 'EUR_Digital_Scorecard'
-    table_id = 'Digital E2E -Raw data'
-    table_full = 'eur-itnanalytics-97661-sbx.EUR_Digital_Scorecard.Digital E2E -Raw data'
+    project_id = 
+    dataset_id = 
+    table_id = 
+    table_full = f'{project_id}.{dataset_id}.{table_id}'
     
     e_offer_values = ['Mobile Only postpaid', 'Fixed Only', 'Mobile Convergent postpaid', 'Fixed Convergent']
     c_data_type_values = ['Acquisitions', 'Renewals']
@@ -80,7 +80,7 @@ def main(request):
 
     query = """
         SELECT *
-        FROM `eur-itnanalytics-97661-sbx.EUR_Digital_Scorecard.Full extract`;
+        FROM `{table_full}`;
     """
     df = client.query_and_wait(query).to_dataframe()  # Fetch data from BigQuery
     print('Start loading the data...')
