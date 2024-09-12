@@ -14,8 +14,7 @@ The project involves handling extensive datasets related to the Europe Digital T
 
 The project adapts GPT-3.5 for comments generation, moving away from the T5 model. Key differences include:
 
-- **Architecture**: GPT-3.5 uses a Transformer architecture, unlike T5's Encoder-Decoder.
-- **Training Approach**: GPT-3.5 employs autoregressive training, while T5 uses teacher forcing.
+- **Training Approach**: GPT-3.5 Prmopt Engineering.
 - **Flexibility**: GPT-3.5 offers versatile NLP capabilities without specific task training, unlike T5 which requires fine-tuning.
 - **Context Understanding**: GPT-3.5’s autoregressive nature provides stronger context understanding and more coherent comments.
 
